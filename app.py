@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request, flash
 
 app = Flask(__name__)
 
@@ -10,8 +10,17 @@ def home():
 def server():
     return render_template("/server/serverHome.html")
 
-@app.route('/addData')
+@app.route('/addData', methods = ["POST", "GET"])
 def addData():
+    if request.method == "POST":
+        content = request.form["content"]
+        summary = request.form["summary"]
+        if content and summary:
+            # flash("Add data success!")
+            return redirect(url_for("server")) #test
+        else:
+            # flash("Data already exists!")
+            return redirect(url_for("addData"))
     return render_template("/server/addData.html")
 
 @app.route('/editData')
