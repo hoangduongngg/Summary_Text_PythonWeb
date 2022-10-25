@@ -1,6 +1,21 @@
+from telnetlib import STATUS
 from flask import Flask, redirect, url_for, render_template, request, flash
+from flask_sqlalchemy import SQLAlchemy
+from os import path
 
 app = Flask(__name__)
+
+sql_Pass = "123456789"
+sql_Schema = "textSummary"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:" + sql_Pass + "@localhost/" + sql_Schema + "charset=utf8mb4"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
+
+db = SQLAlchemy(app)
+
+
+    
+
+
 
 @app.route('/')
 def home():
