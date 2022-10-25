@@ -1,0 +1,230 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: capitalize;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  display: block;
+  min-width: 100px;
+  border: none;
+  border-radius: 32px;
+  background-color: #137333;
+  color: white;
+  padding: 10px 34px;
+  margin-bottom: 15px;
+}
+
+.summary {
+  width: 786px;
+  text-align: center;
+}
+
+.summary form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.summary input {
+  display: block;
+  outline: none;
+  background-color: #d9d9d9;
+  border: none;
+  height: 150px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.summary__button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.summary .summary__botton {
+  width: 100%;
+  height: 52px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+}
+
+.server {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.server_home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.server .left {
+  margin-right: 50px;
+}
+
+.add {
+  width: 786px;
+  text-align: center;
+}
+
+.add form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.add input {
+  display: block;
+  outline: none;
+  background-color: #d9d9d9;
+  border: none;
+  height: 150px;
+  border-radius: 15px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.add__button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.add__botton {
+  width: 100%;
+  height: 52px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+}
+
+.add__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.add__item p {
+  display: block;
+  width: 30%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.add__item input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.add input.add__2 {
+  height: 52px;
+}
+
+.Edit {
+  width: 786px;
+  text-align: center;
+}
+
+.Edit form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Edit input {
+  display: block;
+  outline: none;
+  background-color: #d9d9d9;
+  border: none;
+  height: 150px;
+  border-radius: 15px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.Edit__button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Edit__botton {
+  width: 100%;
+  height: 52px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+}
+
+.Edit__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Edit__item p {
+  display: block;
+  width: 30%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.Edit__item input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Edit input.Edit__2 {
+  height: 52px;
+}
+
+.Edit input.Edit__0 {
+  height: 52px;
+  width: 50px !important;
+}
+/*# sourceMappingURL=styles.css.map */
