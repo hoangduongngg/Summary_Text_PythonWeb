@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from Controller import doEditData
+from Controller import doEditData, doSetActiveVersionController
 
 app = Flask(__name__)
 
@@ -30,9 +30,9 @@ def deleteData():
     return render_template("/server/deleteData.html")
 
 
-@app.route('/versionManagement')
+@app.route('/versionManagement', methods = ['GET', 'POST'])
 def versionManagement():
-    return render_template("/server/versionManagement.html")
+    return doSetActiveVersionController.setActive()
 
 
 if __name__ == "__main__":
