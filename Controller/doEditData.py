@@ -15,6 +15,7 @@ def update():
         content = request.form["content"]
         summary = request.form["summary"]
         iD = request.args.get('id')
+        print(iD)
         print(content+' '+summary)
         data = Data(iD, content, summary, False)
         print(data)

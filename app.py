@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from Controller import doEditData
+from Controller import doEditData, doDeleteData
 
 app = Flask(__name__)
 
@@ -25,9 +25,9 @@ def editData():
     return doEditData.update()
 
 
-@app.route('/deleteData')
+@app.route('/deleteData', methods=['GET', 'POST'])
 def deleteData():
-    return render_template("/server/deleteData.html")
+    return doDeleteData.delete()
 
 
 @app.route('/versionManagement')

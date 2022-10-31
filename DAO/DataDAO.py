@@ -32,12 +32,13 @@ def updateData(data):
     print('update thành công')
 
 
-def deleteData(data):
+def deleteData(id):
     conn = DAO1.connectDB()
     cursor = conn.cursor()
-    cursor.execute('delete from Data where id = %s', data.id)
+    cursor.execute('delete from Data where id = %s', id)
     conn.commit()
     conn.close()
+    print('delete thanh cong')
 
 
 def isDataExist(data):
@@ -72,15 +73,15 @@ def searchByID(id):
     return data
 
 
-# data = Data(1, 'Hôm nay không đẹp trời', 'trời không đẹp', False)
-# # insertData(data)
+# data = Data(2, 'Hôm nay không đẹp trời 24', 'trời không đẹp', False)
+# insertData(data)
 # # updateData('Hôm nay không đẹp trời', 'trời không đẹp', 0, 2)
-# # deleteData(1)
+# deleteData(1)
 #
 # # data = Data()
 # # data.content = 'Hôm nay không đẹp trời'
 # # print(isDataExist(data))
 # # searchByID(1)
-# # getAllData()
+# getAllData()
 # # updateData(data)
 # print(isDataExist(data))
