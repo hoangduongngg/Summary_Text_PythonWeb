@@ -31,14 +31,33 @@ def updateData(data):
     conn.close()
     print('update thành công')
 
-
+def searchByID(id):
+    conn = DAO1.connectDB()
+    cursor = conn.cursor()
+    cursor.execute('select * from Data where id = %s', id)
+    result = cursor.fetchall()
+    conn.close()
+    if len(result) != 0:
+        data = Data(0,' ', ' ', False)
+        for res in result:
+            data.id = res[0]
+            data.content = res[1]
+            data.summary = res[2]
+            data.istrained = res[3]
+        return data
+    else:
+        return None
+    
 def deleteData(id):
     conn = DAO1.connectDB()
     cursor = conn.cursor()
-    cursor.execute('delete from Data where id = %s', id)
+    test = cursor.execute('delete from Data where id = %s', id)
     conn.commit()
     conn.close()
-    print('delete thanh cong')
+    if test != 0:
+        print('delete thanh cong')
+        return True
+    else: return False
 
 
 def isDataExist(data):
@@ -59,21 +78,21 @@ def isDataExist(data):
         return 'data khong ton tai'
 
 
-def searchByID(id):
-    conn = DAO1.connectDB()
-    cursor = conn.cursor()
-    cursor.execute('select * from Data where id = %s', id)
-    data = Data(0, ' ', ' ', False)
-    for res in cursor.fetchall():
-        data.id = res[0]
-        data.content = res[1]
-        data.summary = res[2]
-        data.istrained = res[3]
-    conn.close()
-    return data
+# def searchByID(id):
+#     conn = DAO1.connectDB()
+#     cursor = conn.cursor()
+#     cursor.execute('select * from Data where id = %s', id)
+#     data = Data(0, ' ', ' ', False)
+#     for res in cursor.fetchall():
+#         data.id = res[0]
+#         data.content = res[1]
+#         data.summary = res[2]
+#         data.istrained = res[3]
+#     conn.close()
+#     return data
 
 
-# data = Data(2, 'Hôm nay không đẹp trời 24', 'trời không đẹp', False)
+# data = Data(1, 'Hôm nay không đẹp trời 24', 'trời không đẹp', False)
 # insertData(data)
 # # updateData('Hôm nay không đẹp trời', 'trời không đẹp', 0, 2)
 # deleteData(1)

@@ -56,7 +56,30 @@
           </div>
         </form>
         {% endif %}
+        {% if mess != None %}
+        <div class="mess" id="mess1">
+          <div class="mess__tt">
+            <h2 class="mess__title">{{mess }}</h2>
+            <div class="mess__btn" id="btn">OK</div>
+          </div>
+        </div>
+        {% else %}
+        <div class="mess" style="display: none">
+          <div class="mess__tt">
+            <h2 class="mess__title">Đã Xoá thành công Data</h2>
+            <div class="mess__btn">OK</div>
+          </div>
+        </div>
+        {% endif %}
       </div>
     </div>
   </body>
+  <script>
+    const mess = document.getElementById('mess1')
+    console.log(mess)
+    const btn = document.getElementById('btn')
+    btn.onclick = () =>{
+      mess.style = 'display:none'
+    }
+  </script>
 </html>
