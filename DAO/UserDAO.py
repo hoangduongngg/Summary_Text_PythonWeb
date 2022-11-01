@@ -3,7 +3,7 @@ from Model.User import User
 
 
 def checkLogin(user):
-    conn = DAO.connectDB()
+    conn = DAO1.connectDB()
     cursor = conn.cursor()
     cursor.execute('select * from user where username = %s and password = %s', (user.username, user.password))
     result = cursor.fetchall()
@@ -14,7 +14,7 @@ def checkLogin(user):
             user.password = res[2]
         return user
     else:
-        return 'sai thong tin dang nhap'
+        return None
 
 
 user = User('admin', 'group2')

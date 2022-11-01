@@ -16,14 +16,25 @@
     <!-- Edit -->
     <div class="Edit">
         <h2>Edit Data</h2>
+        {% if id != None%}
         <form action="" method="GET">
              <div class="Edit__item">
-            <p>ID:</p> <input class="Edit__0" type="text" name="id" id="id" >
+            <p>ID:</p> <input class="Edit__0" type="text" name="id" id="id" value="{{data.id}}" >
                   <div class="Edit__button">
             <button type="submit">Search</button>
           </div>
           </div>
           </form>
+        {% else %}
+        <form action="" method="GET">
+             <div class="Edit__item">
+            <p>ID:</p> <input class="Edit__0" type="text" name="id" id="id1"  >
+                  <div class="Edit__button">
+            <button type="submit">Search</button>
+          </div>
+          </div>
+          </form>
+        {% endif %}
         {% if data != None%}
         <form action="" method="POST">
           <div class="Edit__item">
@@ -50,7 +61,22 @@
         </form>
         {% endif %}
       </div>
-      
+        {% if message != None%}
+      <div class="mess" id="message">
+      <div class="mess__tt">
+        <h2 class="mess__title">{{message}}</h2>
+        <div class="mess__btn" id="btnOk">OK</div>
+      </div>
+          {% endif %}
+  </div>
     </div>
   </body>
+<script>
+    const mess= document.getElementById('message')
+    console.log(mess)
+    const btn = document.getElementById('btnOk')
+    btn.onclick = () =>{
+        mess.style = 'display: none'
+    }
+</script>
 </html>
