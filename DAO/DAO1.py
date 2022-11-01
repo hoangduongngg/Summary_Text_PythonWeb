@@ -12,7 +12,7 @@ def connectDB():
 
     # Dương 
     host = 'localhost'
-    dbName = 'textsummary'
+    dbName = 'textsummarydb'
     userName = 'root'
     password = '123456789'
     conn = pymysql.connect(host=host, user=userName, password=password, database=dbName)
