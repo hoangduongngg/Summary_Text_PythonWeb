@@ -16,6 +16,3 @@ def checkLogin(user):
     else:
         return None
 
-
-user = User('admin', 'group2')
-print(checkLogin(user))
