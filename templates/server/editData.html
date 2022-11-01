@@ -18,22 +18,22 @@
         <h2>Edit Data</h2>
         {% if id != None%}
         <form action="" method="GET">
-             <div class="Edit__item">
-            <p>ID:</p> <input class="Edit__0" type="text" name="id" id="id" value="{{data.id}}" >
-                  <div class="Edit__button">
-            <button type="submit">Search</button>
+          <div class="Edit__item">
+            <p>ID:</p>
+            <input class="Edit__0" type="text" name="id" id="id"  value="{{data.id}}" style="position: relative;border-radius: 10px 20px 20px 10px;" />
+            <button type="submit"
+            style="width: 10px;height: 52px;display: flex;justify-content: center;align-items: center;position: absolute;right: 21%">Search</button>
           </div>
-          </div>
-          </form>
+        </form>
         {% else %}
         <form action="" method="GET">
-             <div class="Edit__item">
-            <p>ID:</p> <input class="Edit__0" type="text" name="id" id="id1"  >
-                  <div class="Edit__button">
-            <button type="submit">Search</button>
+          <div class="Edit__item">
+            <p>ID:</p>
+            <input class="Edit__0" type="text" name="id" id="id1"   style="position: relative;border-radius: 10px 20px 20px 10px;" />
+            <button type="submit"
+            style="width: 10px;height: 52px;display: flex;justify-content: center;align-items: center;position: absolute;right: 21%">Search</button>
           </div>
-          </div>
-          </form>
+        </form>
         {% endif %}
         {% if data != None%}
         <form action="" method="POST">

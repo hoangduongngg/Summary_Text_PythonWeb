@@ -237,7 +237,6 @@ button {
 }
 .mess__tt {
   width: 300px;
-  height: 140px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -246,9 +245,10 @@ button {
   box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.1215686275), 0 6px 16px rgba(0, 0, 0, 0.0784313725), 0 9px 28px 8px rgba(0, 0, 0, 0.0509803922);
   text-align: center;
   background-color: #fff;
+  padding:20px;
 }
 .mess__title {
-  margin-bottom: 40px;
+  padding-bottom: 20px;
 }
 .mess__btn {
   display: inline-flex;
@@ -265,4 +265,4 @@ button {
   background: #1890ff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px rgba(0, 0, 0, 0.0431372549);
-/*# sourceMappingURL=styles.css.map */
+}
