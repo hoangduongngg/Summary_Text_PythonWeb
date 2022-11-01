@@ -1,10 +1,10 @@
 from asyncio.windows_events import NULL
-from flask import request, render_template
+from flask import request, render_template, request 
 
 from DAO import DataDAO
 from Model.Data import Data
 
-def AddData():
+def AddData(mess):
     # if request.method == 'GET':
     #     return render_template("/server/addData.html")
     if request.method == 'POST':
@@ -15,9 +15,11 @@ def AddData():
         if DataDAO.isDataExist(data) == NULL:
             DataDAO.addData(data)
             print("Thanh cong")
-            return render_template("/server/serverHome.html")
+            mess = "Add data successfully!!!"
+
         else:
             print("Data da ton tai")
+            mess = "Data already exists!!!"
         
-    return render_template("/server/addData.html")
+    return render_template("/server/addData.html", mess = mess)
     

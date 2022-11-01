@@ -17,7 +17,8 @@ def server():
 
 @app.route('/addData', methods=['GET', 'POST'])
 def addData():
-    return doAddData.AddData()
+    mess = ""
+    return doAddData.AddData(mess)
 
 
 @app.route('/editData', methods=['GET', 'POST'])
