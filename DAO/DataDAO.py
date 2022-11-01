@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from DAO import DAO1
 from Model.Data import Data
 
@@ -13,7 +14,7 @@ def getAllData():
         print(i)
 
 
-def insertData(data):
+def addData(data):
     conn = DAO1.connectDB()
     cursor = conn.cursor()
     cursor.execute('insert into tblData (content, summary, isTrained) values (%s, %s, %s)',

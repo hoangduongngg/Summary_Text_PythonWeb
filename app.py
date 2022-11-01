@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from Controller import doEditData
+from Controller import doEditData, doAddData
 
 app = Flask(__name__)
 
@@ -15,9 +15,9 @@ def server():
     return render_template("/server/serverHome.html")
 
 
-@app.route('/addData')
+@app.route('/addData', methods=['GET', 'POST'])
 def addData():
-    return render_template("/server/addData.html")
+    return doAddData.AddData()
 
 
 @app.route('/editData', methods=['GET', 'POST'])

@@ -16,17 +16,26 @@
             <h2>Add Data</h2>
             <form action="addData" method="post">
               <div class="add__item">
-                <p>Content:</p> <input name="content" class="add__1" type="text">
+                <p>Content:</p> <input name="content" value="{{data.content}}" class="add__1" type="text" >
               </div>
               <div class="add__item">
-                <p>Summary:</p> <input name="summary" class="add__2" type="text">
+                <p>Summary:</p> <input name="summary" value="{{data.summary}}" class="add__2" type="text">
               </div>
               <div class="add__button">
                 <button type="submit">Add</button>
               </div>
+
             </form>
           </div>
-      
+
+          {% if mess == None%}
+            <p> Please text content and summary here!!! </p>
+          {% elif mess == "fail" %}
+            <p style="color:red ;"> Data already exists!!! </p>
+          
+          {%elif (mess == "success")%}
+            <p style="color:rgb(0, 118, 51) ;"> Add data successfully!!! </p>
+          {% endif%}
     </div>
   </body>
 </html>
