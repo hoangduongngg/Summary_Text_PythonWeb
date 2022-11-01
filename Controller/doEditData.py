@@ -1,4 +1,3 @@
-import flask
 from flask import request, render_template
 
 from DAO import DataDAO

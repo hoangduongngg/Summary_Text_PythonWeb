@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from DAO import DAO1
 from Model.Data import Data
 
@@ -79,15 +78,3 @@ def searchByID(id):
     else:
         return None
 
-# data = Data(1, 'Hôm nay không đẹp trời', 'trời không đẹp', False)
-# # insertData(data)
-# # updateData('Hôm nay không đẹp trời', 'trời không đẹp', 0, 2)
-# # deleteData(1)
-#
-# # data = Data()
-# # data.content = 'Hôm nay không đẹp trời'
-# # print(isDataExist(data))
-# # searchByID(1)
-# # getAllData()
-# # updateData(data)
-# print(isDataExist(data))
