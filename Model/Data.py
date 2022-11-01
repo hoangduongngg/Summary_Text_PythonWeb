@@ -1,6 +1,6 @@
 class Data:
-    def __init__(self, id, content, summary, istrained):
-        self.id = id
+    def __init__(self, content, summary, istrained):
+        self.id = None
         self.content = content
         self.summary = summary
         self.istrained = istrained
