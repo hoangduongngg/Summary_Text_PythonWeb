@@ -16,8 +16,8 @@ def getAllData():
 def addData(data):
     conn = DAO1.connectDB()
     cursor = conn.cursor()
-    cursor.execute('insert into tblData (content, summary, isTrained) values (%s, %s, %s)',
-                   (data.content, data.summary, data.istrained))
+    cursor.execute('call addData (%s, %s, %s)',
+        (data.content, data.summary, data.istrained))
     conn.commit()
     conn.close()
 
