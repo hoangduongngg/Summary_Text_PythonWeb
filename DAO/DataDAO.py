@@ -92,7 +92,7 @@ def isDataExist(data):
 #     return data
 
 
-# data = Data(1, 'Hôm nay không đẹp trời 24', 'trời không đẹp', False)
+# data = Data(3, 'test', 'test', False)
 # insertData(data)
 # # updateData('Hôm nay không đẹp trời', 'trời không đẹp', 0, 2)
 # deleteData(1)
