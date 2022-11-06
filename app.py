@@ -14,29 +14,35 @@ def home():
 @app.route('/server')
 def server():
     if 'logged_in' in session:
-        # User is loggedin show them the home page
         return render_template("/server/serverHome.html")
-        # User is not loggedin redirect to login page
     return redirect(url_for('Login'))
 
 
 @app.route('/addData', methods=['GET', 'POST'])
 def addData():
+    if 'logged_in' not in session:
+        return redirect(url_for('Login'))
     return doAddData.AddData()
 
 
 @app.route('/editData', methods=['GET', 'POST'])
 def editData():
+    if 'logged_in' not in session:
+        return redirect(url_for('Login'))
     return doEditData.update()
 
 
 @app.route('/deleteData')
 def deleteData():
+    if 'logged_in' not in session:
+        return redirect(url_for('Login'))
     return render_template("/server/deleteData.html")
 
 
 @app.route('/versionManagement')
 def versionManagement():
+    if 'logged_in' not in session:
+        return redirect(url_for('Login'))
     return render_template("/server/versionManagement.html")
 
 
