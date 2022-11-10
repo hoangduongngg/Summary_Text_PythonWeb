@@ -4,7 +4,7 @@ from DAO import DataDAO
 from Model.Data import Data
 
 
-def AddData():
+def AddDataController():
     data = None
     mess = None
     if request.method == 'POST':

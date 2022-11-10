@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from Controller import doEditData, doAddData
+from Controller import doEditData, AddDataController
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def server():
 
 @app.route('/addData', methods=['GET', 'POST'])
 def addData():
-    return doAddData.AddData()
+    return AddDataController.AddDataController()
 
 
 @app.route('/editData', methods=['GET', 'POST'])
@@ -34,6 +34,9 @@ def deleteData():
 def versionManagement():
     return render_template("/server/versionManagement.html")
 
+@app.route('/reTrain')
+def reTrain():
+    return render_template("/server/reTrain.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
