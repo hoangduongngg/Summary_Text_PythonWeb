@@ -1,18 +1,17 @@
-import DAO1
-from Model.User import User
+from DAO import DAO1
 
 
 def checkLogin(user):
     conn = DAO1.connectDB()
     cursor = conn.cursor()
-    cursor.execute('select * from user where username = %s and password = %s', (user.username, user.password))
+    cursor.execute('select * from tbluser where username = %s and password = %s limit 1', (user.username, user.password))
     result = cursor.fetchall()
     if len(result) != 0:
-        user = User('', '')
         for res in result:
+            user.id = res[0]
             user.username = res[1]
             user.password = res[2]
-        return user
+        return True
     else:
-        return None
+        return False
 
