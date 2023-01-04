@@ -1,0 +1,3 @@
+cd C:\CODE\Hethongthongminh\Evaluation\rouge2_v1.2.2_runnable\v1.2.2
+
+java -jar rouge2-1.2.2.jar

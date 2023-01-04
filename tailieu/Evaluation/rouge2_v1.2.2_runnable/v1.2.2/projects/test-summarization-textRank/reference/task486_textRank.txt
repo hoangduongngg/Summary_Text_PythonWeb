@@ -1,0 +1,2 @@
+HoSE cho phép giao dịch cổ phiếu lô lẻ từ ngày 12/9, tách biệt với giao dịch lô chẵn. Nhà đầu tư có thể bán từ 1 đến 99 cổ phiếu chứ không cần phải giao dịch theo lô chẵn tối thiểu 100 như hiện tại.
+

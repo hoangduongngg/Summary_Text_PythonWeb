@@ -1,0 +1,2 @@
+VCBS triển khai eKYC - định danh khách hàng điện tử trên Mobile Banking, miễn phí giao dịch khi mở mới. Giải pháp cho phép khách hàng mở tài khoản, đăng ký dịch vụ 100% trực tuyến, đơn giản thủ tục, nâng cao bảo mật và trải nghiệm người dùng.
+

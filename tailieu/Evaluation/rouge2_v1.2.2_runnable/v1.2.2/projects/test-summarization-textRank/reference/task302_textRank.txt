@@ -1,0 +1,2 @@
+Sau khi ROS bị hủy niêm yết, FLC và HAI bị đình chỉ giao dịch thì các mã còn lại là AMD, ART và KLF cũng đã bị đưa vào diện cảnh báo như GAB.
+
